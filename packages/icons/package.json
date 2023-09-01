@@ -1,0 +1,19 @@
+{
+  "name": "@awe-player/icons",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "svgtofont --sources ./src --output ./dist --fontName awe"
+  },
+  "svgtofont": {
+    "css": {
+      "fontSize": "20px"
+    }
+  },
+  "keywords": [],
+  "author": "@AwePlayer",
+  "license": "ISC",
+  "dependencies": {
+    "svgtofont": "^4.0.0"
+  }
+}
