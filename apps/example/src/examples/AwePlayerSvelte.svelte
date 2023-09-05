@@ -3,14 +3,10 @@
   import '@awe-player/tailwind/player.css';
 </script>
 
-<div class="mx-auto aspect-video max-w-4xl relative example">
+<div class="mx-auto max-w-4xl relative example p-4">
   <div class="grad-box" />
-  <div class="w-full h-full rounded-lg overflow-hidden bg-white">
-    <AwePlayer
-      src={[
-        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      ]}
-    />
+  <div class="w-full h-full rounded-lg overflow-hidden">
+    <AwePlayer src={['./demo-video.mp4']} />
   </div>
 </div>
 
@@ -30,8 +26,14 @@
     transition: all 0.3s;
     border-radius: inherit;
   }
+  .example {
+    transition: all 0.3s ease-out;
+  }
   .example:hover .grad-box::before {
     transform: translate3d(0px, 10px, 0) scale(1);
+  }
+  .example:hover {
+    transform: translateY(-5px) scale(1.01);
   }
   .grad-box::after {
     content: '';

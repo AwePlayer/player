@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .awe-btn-wrapper {
+    @apply flex items-center justify-center space-x-2;
+  }
+  .awe-btn {
+    @apply flex aspect-square h-8 w-8 items-center justify-center p-2 opacity-75 transition-opacity ease-out hover:opacity-100;
+  }
+  .awe-input-slider {
+    @apply appearance-none h-full w-full cursor-pointer opacity-0 absolute top-0 bottom-0 left-0 right-0 m-auto;
+  }
+  .awe-input-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    background-color: black;
+  }
+}
