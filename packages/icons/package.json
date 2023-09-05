@@ -1,7 +1,7 @@
 {
   "name": "@awe-player/icons",
   "version": "0.0.0",
-  "description": "",
+  "description": "A set of modified @GoogleFonts icons.",
   "scripts": {
     "build": "svgtofont --sources ./src --output ./dist --fontName awe"
   },
@@ -10,9 +10,13 @@
       "fontSize": "20px"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "AwePlayer",
+    "SVG Icons",
+    "Icons"
+  ],
   "author": "@AwePlayer",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "svgtofont": "^4.0.0"
   }
