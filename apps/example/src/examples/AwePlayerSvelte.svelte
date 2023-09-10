@@ -1,12 +1,21 @@
 <script>
   import { AwePlayer } from '@awe-player/svelte';
-  import '@awe-player/tailwind/player.css';
+  import '@awe-player/icons/dist/awe-icon.css';
 </script>
 
 <div class="mx-auto max-w-4xl relative example p-4">
   <div class="grad-box" />
   <div class="w-full h-full rounded-lg overflow-hidden">
-    <AwePlayer src={['./demo-video.mp4']} />
+    <AwePlayer
+      src={['/demo-video.mp4']}
+      captions={[
+        {
+          title: 'English',
+          lang: 'english',
+          src: '/english.vtt',
+        },
+      ]}
+    />
   </div>
 </div>
 

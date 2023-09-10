@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "A set of modified @GoogleFonts icons.",
   "scripts": {
-    "build": "svgtofont --sources ./src --output ./dist --fontName awe"
+    "build": "svgtofont --sources ./src --output ./dist --fontName awe-icon"
   },
   "svgtofont": {
     "css": {

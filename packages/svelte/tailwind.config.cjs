@@ -1,1 +1,1 @@
-module.exports = require('tailwind/tailwind.config');
+module.exports = require('@awe-player/tailwind/tailwind.config');

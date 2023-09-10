@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "svelte-kit sync && svelte-package -w",
     "package": "svelte-kit sync && svelte-package && publint",
-    "prepublishOnly": "pnpm run package",
+    "prepublishOnly": "npm run package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
@@ -51,5 +51,8 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "author": "@AwePlayer",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@floating-ui/dom": "^1.5.1"
+  }
 }
