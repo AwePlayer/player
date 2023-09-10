@@ -1,27 +1,24 @@
 {
-  "name": "@awe-player/awe-player",
-  "description": "AwePlayer Monorepo",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write ."
-  },
-  "devDependencies": {
-    "@awe-player/eslint": "workspace:*",
-    "@awe-player/tailwind": "workspace:*",
-    "autoprefixer": "^10.4.15",
-    "eslint": "^8.0.0",
-    "postcss": "^8.4.29",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0",
-    "prettier-plugin-svelte": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.4",
-    "tailwindcss": "^3.3.3",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.6.10",
-  "author": "@AwePlayer",
-  "license": "MIT"
+	"name": "@awe-player/awe-player",
+	"description": "AwePlayer Monorepo",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "turbo run format"
+	},
+	"devDependencies": {
+		"@awe-player/eslint": "workspace:*",
+		"@awe-player/tailwind": "workspace:*",
+		"autoprefixer": "^10.4.15",
+		"eslint": "^8.0.0",
+		"postcss": "^8.4.29",
+		"prettier": "^3.0.3",
+		"tailwindcss": "^3.3.3",
+		"turbo": "latest"
+	},
+	"packageManager": "pnpm@8.6.10",
+	"author": "@AwePlayer",
+	"license": "MIT"
 }

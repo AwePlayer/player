@@ -1,11 +1,11 @@
 {
-  "name": "@awe-player/tailwind",
-  "version": "0.0.0",
-  "description": "AwePlayer tailwind config and styles.",
-  "keywords": [
-    "AwePlayer",
-    "tailwindcss"
-  ],
-  "author": "@AwePlayer",
-  "license": "MIT"
+	"name": "@awe-player/tailwind",
+	"version": "0.0.0",
+	"description": "AwePlayer tailwind config and styles.",
+	"keywords": [
+		"AwePlayer",
+		"tailwindcss"
+	],
+	"author": "@AwePlayer",
+	"license": "MIT"
 }

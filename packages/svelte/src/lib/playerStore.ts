@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
 
 const playerStore = writable({
-  currentVideoLang: '',
-  currentCaptionLang: '',
+	currentVideoLang: '',
+	currentCaptionLang: '',
 });
 
 export default playerStore;

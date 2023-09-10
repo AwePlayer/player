@@ -1,23 +1,23 @@
 {
-  "name": "@awe-player/icons",
-  "version": "0.0.0",
-  "description": "A set of modified @GoogleFonts icons.",
-  "scripts": {
-    "build": "svgtofont --sources ./src --output ./dist --fontName awe-icon"
-  },
-  "svgtofont": {
-    "css": {
-      "fontSize": "20px"
-    }
-  },
-  "keywords": [
-    "AwePlayer",
-    "SVG Icons",
-    "Icons"
-  ],
-  "author": "@AwePlayer",
-  "license": "MIT",
-  "dependencies": {
-    "svgtofont": "^4.0.0"
-  }
+	"name": "@awe-player/icons",
+	"version": "0.0.0",
+	"description": "A set of modified @GoogleFonts icons.",
+	"scripts": {
+		"build": "svgtofont --sources ./src --output ./dist --fontName awe-icon"
+	},
+	"svgtofont": {
+		"css": {
+			"fontSize": "20px"
+		}
+	},
+	"keywords": [
+		"AwePlayer",
+		"SVG Icons",
+		"Icons"
+	],
+	"author": "@AwePlayer",
+	"license": "MIT",
+	"dependencies": {
+		"svgtofont": "^4.0.0"
+	}
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import playerStore from '$lib/playerStore.js';
+	import playerStore from '$lib/playerStore.js';
 
-  export let current_time: number;
+	export let current_time: number;
 </script>

@@ -1,5 +1,5 @@
 export interface CaptionType {
-  title: string;
-  lang: string;
-  src: string;
+	title: string;
+	lang: string;
+	src: string;
 }

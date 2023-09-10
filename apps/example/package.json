@@ -1,24 +1,27 @@
 {
-  "name": "@awe-player/astro-example",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/svelte": "^4.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "@awe-player/svelte": "workspace:*",
-    "@awe-player/icons": "workspace:*",
-    "astro": "^3.0.5",
-    "svelte": "^4.0.5",
-    "tailwindcss": "^3.3.3"
-  },
-  "devDependencies": {
-    "@awe-player/tailwind": "workspace:*"
-  }
+	"name": "@awe-player/astro-example",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "prettier --write --plugin prettier-plugin-astro --plugin prettier-plugin-tailwindcss ."
+	},
+	"dependencies": {
+		"@astrojs/svelte": "^4.0.0",
+		"@astrojs/tailwind": "^5.0.0",
+		"@awe-player/icons": "workspace:*",
+		"@awe-player/svelte": "workspace:*",
+		"astro": "^3.0.5",
+		"svelte": "^4.0.5",
+		"tailwindcss": "^3.3.3"
+	},
+	"devDependencies": {
+		"@awe-player/tailwind": "workspace:*",
+		"prettier-plugin-astro": "^0.12.0",
+		"prettier-plugin-tailwindcss": "^0.5.4"
+	}
 }
