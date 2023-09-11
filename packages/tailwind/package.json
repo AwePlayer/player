@@ -1,6 +1,7 @@
 {
 	"name": "@awe-player/tailwind",
 	"version": "0.0.0",
+	"private": true,
 	"description": "AwePlayer tailwind config and styles.",
 	"keywords": [
 		"AwePlayer",

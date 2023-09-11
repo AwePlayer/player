@@ -4,7 +4,7 @@
 	"description": "AwePlayer is an elegant and modern media player for svelte.",
 	"scripts": {
 		"dev": "svelte-kit sync && svelte-package -w",
-		"package": "svelte-kit sync && svelte-package && publint",
+		"build": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
