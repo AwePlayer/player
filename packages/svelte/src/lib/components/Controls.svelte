@@ -31,7 +31,7 @@
 </script>
 
 <div class="absolute bottom-0 left-0 right-0 top-0 bg-black/40 text-white">
-	<!-- <Time bind:current_time {duration} /> -->
+	<Time bind:current_time {duration} />
 	<div class="absolute bottom-20 left-0 right-0 mx-auto w-fit">
 		<!-- <Subtitles {captions} bind:current_time /> -->
 	</div>
@@ -42,9 +42,6 @@
 			<!-- <IconButton icon="skip-previous" /> -->
 			<IconButton icon={paused ? 'play' : 'pause'} on:click={handlePlayPause} />
 			<!-- <IconButton icon="skip-next" /> -->
-			<div class="w-fit whitespace-nowrap pr-2 text-xs font-semibold">
-				{timeFormatter(current_time)} / {timeFormatter(duration)}
-			</div>
 		</div>
 		<div class="relative my-auto h-2.5 w-full">
 			<RangeSlider
