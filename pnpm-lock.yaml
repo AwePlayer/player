@@ -54,7 +54,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(astro@3.0.5)(tailwindcss@3.3.3)
       '@awe-player/icons':
-        specifier: workspace:*
+        specifier: '*'
         version: link:../../packages/icons
       '@awe-player/svelte':
         specifier: '*'
@@ -68,10 +68,6 @@ importers:
       tailwindcss:
         specifier: ^3.3.3
         version: 3.3.3
-    devDependencies:
-      '@awe-player/tailwind':
-        specifier: workspace:*
-        version: link:../../packages/tailwind
 
   packages/eslint:
     dependencies:
