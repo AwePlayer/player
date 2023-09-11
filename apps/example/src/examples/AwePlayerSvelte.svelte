@@ -7,7 +7,7 @@
 	<div class="grad-box" />
 	<div class="h-full w-full overflow-hidden rounded-lg">
 		<AwePlayer
-			src={['/demo-video.mp4']}
+			src={['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4']}
 			captions={[
 				{
 					title: 'English',
