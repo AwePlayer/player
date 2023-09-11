@@ -54,10 +54,10 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(astro@3.0.5)(tailwindcss@3.3.3)
       '@awe-player/icons':
-        specifier: workspace:*
+        specifier: latest
         version: link:../../packages/icons
       '@awe-player/svelte':
-        specifier: workspace:*
+        specifier: latest
         version: link:../../packages/svelte
       astro:
         specifier: ^3.0.5
