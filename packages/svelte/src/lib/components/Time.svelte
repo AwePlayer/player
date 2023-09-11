@@ -1,33 +1,13 @@
 <script lang="ts">
-	import throttle from '../utils/throttle.js';
+	import timeFormatter from '$lib/utils/timeFormatter.js';
+
+	export let current_time: number;
 	export let duration: number;
-	export let currentTime: number;
-
-	let ft: string | number = 0;
-
-	$: hours = duration >= 3600;
-
-	$: {
-		if (currentTime) setTime();
-	}
-
-	const setTime = throttle(
-		() => {
-			ft = formatTime(currentTime, hours);
-		},
-		250,
-		true,
-	);
-
-	const formatTime = (seconds = 0, hours = false) => {
-		let s = new Date(seconds * 1000).toISOString().substr(11, 8);
-		return hours ? s : s.substring(3);
-	};
 </script>
 
 <div
-	style="opacity: {ft === 0 ? '0' : '1'};"
-	class="px-2.5 py-2 text-sm font-semibold text-white transition-opacity ease-out"
+	class="px-2.5 py-2 font-semibold opacity-0 transition-opacity ease-out"
+	class:opacity-100={duration}
 >
-	{ft} / {formatTime(duration)}
+	{timeFormatter(current_time || 0)} / {timeFormatter(duration)}
 </div>

@@ -6,10 +6,10 @@
 	export let max: number = 100;
 	export let value: number = 0;
 	export let step: number = 1;
+	export let show_tooltip: boolean = false;
 
-	let input_slider_instance: HTMLInputElement;
 	let tooltip_instance: HTMLDivElement;
-	let tooltip_value = 0;
+	let tooltip_value: number = 0;
 	let current_progress: number = 0;
 
 	$: if (max) {
@@ -24,18 +24,23 @@
 		tooltip_instance.style.opacity = '0';
 	}
 
-	function handleMouseMove(e: any) {
-		const mouseX =
-			e.clientX - input_slider_instance.getBoundingClientRect().left;
-		const sliderWidth = input_slider_instance.clientWidth;
-		const minValue = parseInt(input_slider_instance.min);
-		const maxValue = parseInt(input_slider_instance.max);
+	function handleMouseMove(e: MouseEvent): void {
+		const rangeSlider = e.target as HTMLInputElement;
+		const rect = rangeSlider.getBoundingClientRect();
+		const offsetX = e.clientX - rect.left;
+		const percentage = (offsetX / rect.width) * 100;
 
-		const percent = (mouseX / sliderWidth) * 100;
-		const value = Math.round(
-			(percent / 100) * (maxValue - minValue) + minValue,
+		const calculatedValue =
+			(parseFloat(rangeSlider.max) - parseFloat(rangeSlider.min)) *
+				(percentage / 100) +
+			parseFloat(rangeSlider.min);
+
+		const clampedValue = Math.max(
+			parseFloat(rangeSlider.min),
+			Math.min(parseFloat(rangeSlider.max), calculatedValue),
 		);
-		tooltip_value = value + 1;
+
+		tooltip_value = clampedValue;
 
 		const virtualEl = {
 			getBoundingClientRect() {
@@ -55,31 +60,31 @@
 		computePosition(virtualEl, tooltip_instance, {
 			placement: 'bottom',
 		}).then(({ x }) => {
-			Object.assign(tooltip_instance.style, {
-				left: `${x}px`,
-			});
+			tooltip_instance.style.left = `${x}px`;
 		});
 	}
 </script>
 
-<div
-	bind:this={tooltip_instance}
-	class="absolute bottom-10 left-0 rounded-lg bg-black px-4 py-2 opacity-0 transition-opacity ease-out"
->
-	{timeFormatter(tooltip_value)}
-</div>
+{#if show_tooltip}
+	<div
+		bind:this={tooltip_instance}
+		class="absolute bottom-10 left-0 rounded-lg bg-black px-4 py-2 opacity-0 transition-[width,opacity] ease-out"
+	>
+		{timeFormatter(tooltip_value)}
+	</div>
+{/if}
+
 <div
 	class="group/slider relative my-auto flex h-2.5 w-full flex-1 items-center justify-center overflow-hidden rounded-full"
 >
 	<div
 		class="absolute bottom-0 left-0 top-0 m-auto h-full w-full rounded-full bg-white/20"
-	></div>
+	/>
 	<div
 		style="width: {current_progress}%"
 		class="absolute bottom-0 left-0 top-0 m-auto h-full rounded-full bg-blue-500 group-hover/slider:bg-blue-400"
-	></div>
+	/>
 	<input
-		bind:this={input_slider_instance}
 		class="absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full cursor-pointer appearance-none opacity-0"
 		{min}
 		{max}

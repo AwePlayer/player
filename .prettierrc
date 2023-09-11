@@ -7,5 +7,10 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"arrowParens": "always",
-	"htmlWhitespaceSensitivity": "ignore"
+	"htmlWhitespaceSensitivity": "ignore",
+	"plugins": [
+		"prettier-plugin-astro",
+		"prettier-plugin-svelte",
+		"prettier-plugin-tailwindcss"
+	]
 }

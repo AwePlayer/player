@@ -2,17 +2,17 @@
 	import Controls from '$lib/components/Controls.svelte';
 
 	export let src: string[] = [];
-	export let captions: string[] = [];
+	// export let captions: string[] = [];
 
 	// player state
 	let paused: boolean = true;
 	let current_time: number;
 	let duration;
-	let volume: number;
-	let on_subtitles: boolean;
-	let is_loading: boolean;
+	let volume: number = 1;
+	// let on_subtitles: boolean;
+	// let is_loading: boolean;
 	let is_fullscreen: boolean;
-	let show_controls: boolean;
+	// let show_controls: boolean;
 	let player_instance: HTMLDivElement;
 
 	// video vars
@@ -38,11 +38,9 @@
 	<Controls
 		{player_instance}
 		{duration}
-		{captions}
 		bind:paused
 		bind:current_time
 		bind:volume
 		bind:is_fullscreen
-		bind:on_subtitles
 	/>
 </div>

@@ -1,7 +1,9 @@
 function timeFormatter(seconds: number): string {
-	const hours = Math.floor(seconds / 3600);
-	const minutes = Math.floor((seconds % 3600) / 60);
-	const remainingSeconds = seconds % 60;
+	let roundedSeconds = Math.round(seconds);
+
+	const hours = Math.floor(roundedSeconds / 3600);
+	const minutes = Math.floor((roundedSeconds % 3600) / 60);
+	const remainingSeconds = roundedSeconds % 60;
 
 	if (hours > 0) {
 		return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(
