@@ -57,7 +57,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/icons
       '@awe-player/svelte':
-        specifier: workspace:*
+        specifier: '*'
         version: link:../../packages/svelte
       astro:
         specifier: ^3.0.5
