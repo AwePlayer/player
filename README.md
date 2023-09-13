@@ -13,4 +13,4 @@ TODO:
 
 ---
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/AwePlayer/player/tree/main/apps/example)
+[![Open in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/AwePlayer/player/tree/main/apps/example)
