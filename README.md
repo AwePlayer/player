@@ -6,6 +6,8 @@ AwePlayer is an elegant and modern media player.
 
 [![Open in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/AwePlayer/player/tree/main/apps/example)
 
+Note: Dure to the nature of CodeSandbox the video player won't go into fullscreen.
+
 ## Installation
 
 Using npm:
